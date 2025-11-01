@@ -18,6 +18,7 @@ $allowedUsers = @(
     "docbrown",
     "professorparadox",
     "whiteteam"  # PROTECTED USER - DO NOT MODIFY
+    "datadog"    # PROTECTED USER - DO NOT MODIFY
 )
 
 # Get all domain users

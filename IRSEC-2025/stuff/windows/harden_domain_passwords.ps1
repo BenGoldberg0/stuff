@@ -26,6 +26,10 @@ foreach ($user in $authorizedUsers) {
         Write-Host "Skipping protected user: whiteteam"
         continue
     }
+    if ($user -eq "datadog") {
+        Write-Host "Skipping protected user: whiteteam"
+        continue
+    }
     
     try {
         Set-ADAccountPassword -Identity $user -NewPassword $newPassword

@@ -8,6 +8,7 @@ source ./blue_team_configuration.sh
 
 # Protected user home directory
 PROTECTED_USER="whiteteam"
+PROTECTED_USER_1="datadog"
 
 scan_files() {
     log "Starting file system scan..."
@@ -53,6 +54,9 @@ scan_files() {
         
         # Skip whiteteam's home directory
         if [[ "$dir" == "/home/$PROTECTED_USER"* ]]; then
+            log "Skipping protected user directory: $dir"
+            continue
+        if [[ "$dir" == "/home/$PROTECTED_USER_1"* ]]; then
             log "Skipping protected user directory: $dir"
             continue
         fi

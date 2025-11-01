@@ -8,6 +8,7 @@ source ./blue_team_configuration.sh
 
 # Protected users that should never be flagged
 PROTECTED_USERS=("whiteteam")
+PROTECTED_USERS_1=("datadog")
 
 scan_users() {
     log "Starting user account scan..."
@@ -18,6 +19,8 @@ scan_users() {
     while IFS=: read -r username _ uid gid _ home shell; do
         # Skip protected users
         if [[ " ${PROTECTED_USERS[@]} " =~ " ${username} " ]]; then
+        if [[ " ${PROTECTED_USERS_1[@]} " =~ " ${username} " ]]; then
+            continue
             continue
         fi
         

@@ -12,6 +12,7 @@ DEFAULT_USERS=(
   systemd-timesync messagebus syslog _apt drwho marymcFly arthurdent sambeckett 
   loki riphunter theflash tonystark drstrange bartallen
   whiteteam  # PROTECTED USER - DO NOT MODIFY
+  datadog
 )
 
 # Get current users
